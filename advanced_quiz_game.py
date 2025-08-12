@@ -26,6 +26,46 @@ questions = [
         'question' : "What year was the first Avengers Movie released?",
         'options' : ["2012", "2015", "2013", "2011"],
         'answer' : "2012"
+    },
+    {
+        'question': "In Naruto, what is the name of Naruto's father?",
+        'options': ["Minato Namikaze", "Kakashi Hatake", "Jiraiya", "Hiruzen Sarutobi"],
+        'answer': "Minato Namikaze"
+    },
+    {
+        'question': "In Attack on Titan, who is known as the 'Armored Titan'?",
+        'options': ["Reiner Braun", "Eren Yeager", "Bertolt Hoover", "Levi Ackerman"],
+        'answer': "Reiner Braun"
+    },
+    {
+        'question': "In Dragon Ball Z, what is Goku's Saiyan birth name?",
+        'options': ["Kakarot", "Bardock", "Raditz", "Vegeta"],
+        'answer': "Kakarot"
+    },
+    {
+        'question': "In One Piece, who is the captain of the Straw Hat Pirates?",
+        'options': ["Monkey D. Luffy", "Zoro", "Sanji", "Shanks"],
+        'answer': "Monkey D. Luffy"
+    },
+    {
+        'question': "In Death Note, what is the real name of the character 'L'?",
+        'options': ["L Lawliet", "Light Yagami", "Ryuk", "Near"],
+        'answer': "L Lawliet"
+    },
+    {
+        'question': "In Demon Slayer, what breathing style does Tanjiro initially learn?",
+        'options': ["Water Breathing", "Flame Breathing", "Thunder Breathing", "Wind Breathing"],
+        'answer': "Water Breathing"
+    },
+    {
+        'question': "In My Hero Academia, what is Izuku Midoriya's hero name?",
+        'options': ["Deku", "Shoto", "All Might Jr.", "Red Riot"],
+        'answer': "Deku"
+    },
+    {
+        'question': "In Hunter x Hunter, what is Gon Freecss's best friend's name?",
+        'options': ["Killua Zoldyck", "Kurapika", "Leorio", "Hisoka"],
+        'answer': "Killua Zoldyck"
     }
     ]
 
@@ -66,5 +106,5 @@ for i, q in enumerate(questions, 1):
 
 
 # now i need to keep track of the score
-
+print("Your final score is ",score)
 
