@@ -78,7 +78,7 @@ score = 0
 print ("......... Welcome to the Game .........")
 
 for i, q in enumerate(questions, 1):
-    print(f"Q{i}: {q['question']}")
+    print(f"Q {i}: {q['question']}")
     options = q ['options'][:]
     random.shuffle(options)
 
