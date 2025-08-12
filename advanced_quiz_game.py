@@ -45,7 +45,7 @@ for i, q in enumerate(questions, 1):
     for idx, option in enumerate(options, 1):
         print(f"  {idx}. {option}")
 
-
+# this makes sure that the 'game' does not crash or break when a person enters the wrong input
     while True:
         try:
             choice = int(input("Your answer (1 - 4): "))
@@ -65,5 +65,6 @@ for i, q in enumerate(questions, 1):
         print("Wrong!! The answer is ", q['answer'])
 
 
+# now i need to keep track of the score
 
 
