@@ -1,98 +1,73 @@
-# def rockpaperscissors(player1,player2):
-#     p1_score = 0
-#     p2_score = 0
-#     rock = 'rock'
-#     paper = 'paper'
-#     scissors = 'scissors'
-#     #player1 logic ..rock 
-#     if player1 == rock and player2 == paper:
-#         return "player1 wins"
-#     p1_score += 1
+import random
 
-
-#     if player1 == rock and player2 == scissors:
-#         return "player1 wins"
-#     p1_score += 1
-    
-
-#     #player1 logic ..scissors 
-#     if player1 == scissors and player2 == paper:
-#         return "player1 wins"
-#     p1_score += 1
-
-
-#     if player1 == scissors and player2 == rock:
-#         return "player2 wins"
-#     p2_score += 1
-
-#     #player1 logic ..paper
-#     if player1 == paper and player2 == scissors:
-#         return "player2 wins"
-#     p2_score += 1
-
-
-#     if player1 == paper and player2 == rock:
-#         return "player1 wins"
-#     p1_score += 1
+choices = ["rock", 'paper', 'scissors']
+player_score = 0
+computer_score = 0
 
 
 
-#     #draw logic
-#     if player1 == player2:
-#         return "draw"
-#     p1_score += 1
-#     p2_score += 1
-   
-
-# #player2 logic ... rock
-#     if player2 == rock and player1 == paper:
-#         return "player1 wins"
-#     p1_score += 1
-
-
-#     if player2 == rock and player1 == scissors:
-#         return "player2 wins"
-#     p2_score += 1
-
-# def finalScore():
-       
-
-# print(rockpaperscissors("paper","rock"))
-
-
-
-def rockpaperscissors(player1, player2):
+def rockpaperscissors(player, computer):
     # Make inputs lowercase so 'Rock' or 'ROCK' also work
-    player1 = player1.lower()
-    player2 = player2.lower()
-    p1_score = 0
-    p2_score = 0
+    player1 = player.lower()
+    player2 = computer.lower()
+    global player_score
+    global computer_score
+    
 
     if player1 == player2:
         return "Draw"
-    p1_score += 0
-    p2_score += 0
+    player_score += 0
+    computer_score += 0
 
     wins = {
         "rock": "scissors",   # rock beats scissors
         "scissors": "paper",  # scissors beats paper
         "paper": "rock"       # paper beats rock
     }
-    if player1 not in wins or player2 not in wins:
-        return "Invalid move"
-
+    
     if wins[player1] == player2:
-        p1_score += 1
-        return "Player 1 wins this round. Player 1 has", p1_score,"points"
+        player_score += 1
+        print()
+        print("Player wins this round.")
+        print(f"Player: {player_score} ... Computer: {computer_score}.") 
+        print()
+
+    elif player1 not in wins or player2 not in wins:
+        return "Invalid move"
+        
         
     else:
-        p2_score += 1
-        return "Player 2 wins this round. Player 2 has", p2_score,"points"
-        
+        computer_score += 1
+        print()
+        print("Computer wins this round.")
+        print(f"Computer: {computer_score} ... Player: {player_score}")  
+        print()
 
 
+def finalScore():
+    if player_score > computer_score:
+        print(f"Player wins the game with {player_score} points while the Computer has {computer_score} points")
+    
+    elif player_score < computer_score:
+        print(f"Computer wins the game with {computer_score} points while the Player has {player_score} points")
+    
+    else:
+        print("It is a draw...")
+        print(f'The Computer has {computer_score} points while the Player has {player_score} points')
+
+def play():
+    rounds = 3
+    current = 1
+    while current <= rounds:
+        player = input("Rock, Paper or Scissors? ")
+        computer = choices[random.randint(0,2)]
+        rockpaperscissors(player,computer)
+        current += 1
+
+    finalScore()
+
+play()
     
 
 
 
-print(rockpaperscissors("rock", "paper"))
