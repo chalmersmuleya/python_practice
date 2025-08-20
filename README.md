@@ -85,7 +85,6 @@ Start thinking about code structure, testing, and readability.
 
 Embrace iterative improvement—learning by committing and refining.
 
-Contribution Ideas
 
 If you'd like to grow this repository further, here are some ideas:
 
